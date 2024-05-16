@@ -19,7 +19,7 @@ console.log("Código 9 do bloco 2")}
         {
             {
                 {
-                    { console.log("Pirâmide foda-se")}
+                    { console.log("Pirâmide :)")}
                 }
             }
         }
