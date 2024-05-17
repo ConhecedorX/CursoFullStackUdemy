@@ -6,7 +6,7 @@ axios.get(url).then(response => {
     let tabelaChinesa = []
     let tabelaFeminina = []
     let tabelaSalarios = []
-    let maior = 0
+    let menor = 100000000000000000000000000000000000
     for (let i = 0; funcionarios.length > i; i++){
         let tabelaTemp = Object.entries(funcionarios[i])
         for (let c = 0; tabelaTemp.length > c; c++){
@@ -30,8 +30,8 @@ axios.get(url).then(response => {
         for (let d = 0; tabelaSalarioTemp.length > d; d++){
             let tabelafiltrosalario = tabelaSalarioTemp[d]
             if (tabelafiltrosalario[0] == "salario"){
-                if (tabelafiltrosalario[1] > maior){
-                    maior = tabelafiltrosalario[1]
+                if (tabelafiltrosalario[1] < menor){
+                    menor = tabelafiltrosalario[1]
                     tabelaSalarios = tabelaFeminina[s]
                 }
             }
