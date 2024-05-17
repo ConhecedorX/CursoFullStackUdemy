@@ -7,13 +7,21 @@ axios.get(url).then(response => {
     let tabelaFeminina = []
     for (let i = 0; funcionarios.length > i; i++){
         let tabelaTemp = Object.entries(funcionarios[i])
-        for (let l = 0; tabelaTemp.length > l; l++){
-            let tabelafiltro = tabelaTemp[l]
+        for (let c = 0; tabelaTemp.length > c; c++){
+            let tabelafiltro = tabelaTemp[c]
             if (tabelafiltro[1] == "China"){
                 tabelaChinesa.push(funcionarios[i])
             }
          }
-         
-    }
-    console.log(tabelaChinesa)
+        }
+        for (let r = 0; tabelaChinesa.length > r; r++){
+            let tabelaChinesaTemp = Object.entries(tabelaChinesa[r])
+            for (let f = 0; tabelaChinesaTemp.length > f; f++){
+                let tabelafiltrofeminino = tabelaChinesaTemp[f]
+                if (tabelafiltrofeminino[1] == "F"){
+                    tabelaFeminina.push(tabelaChinesa[r])
+                }
+             }
+            }
+    console.log(tabelaFeminina)
 })
