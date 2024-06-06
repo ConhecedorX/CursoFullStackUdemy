@@ -1,19 +1,39 @@
-<h1>Projeto</h1>
+<style>
+    .itemEscondido1 {
+        display: none;
+    }
+    .pastaEscondida1 {
+        display: none;
+    }
+    .itemEscondido2 {
+        display: none;
+    }
+    .pastaEscondida2 {
+        display: none;
+    }
+    .itemEscondido3 {
+        display: none;
+    }
+
+
+</style>
+
+<h1>Projeto Listas Aninhadas</h1>
 <ul class="tree">
-    <li>
-        backend
+    <li class="seletor1">
+        <button onclick="mostrarPasta(2),mostrarPasta(3)" ondblclick="esconderPasta(2),esconderPasta(3)">backend</button>
         <ul>
-            <li>
-                app
-                <ul>
+            <li class="pastaEscondida2">
+                <button onclick="mostrarItens(2)" ondblclick="esconderItens(2)">app</button>
+                <ul class="itemEscondido2">
                     <li>produto.js</li>
                     <li>usuario.js</li>
                     <li>venda.js</li>
                 </ul>
             </li>
-            <li>
-                config
-                <ul>
+            <li class="pastaEscondida3">
+                <button onclick="mostrarItens(3)" ondblclick="esconderItens(3)">config</button>
+                <ul class="itemEscondido3">
                     <li>banco.js</li>
                     <li>rotas.js</li>
                     <li>servidor.js</li>
@@ -21,12 +41,13 @@
             </li>
         </ul>
     </li>
-    <li>
-        frontend
+
+    <li class="seletor2">
+        <button onclick="mostrarPasta(1)" ondblclick="esconderPasta(1)">frontend</button>
         <ul>
-            <li>
-                public
-                <ul>
+            <li class="pastaEscondida1">
+                <button onclick="mostrarItens(1)" ondblclick="esconderItens(1)">public</button>
+                <ul class="itemEscondido1">
                     <li>app.cs</li>
                     <li>app.js</li>
                     <li>index.html</li>
@@ -35,6 +56,33 @@
         </ul>
     </li>
 </ul>
+
+<script>
+    function mostrarPasta(numero) {
+        const hiddentext = document.querySelector(`.pastaEscondida${numero}`);
+            if (hiddentext.style.display = 'none'){
+                hiddentext.style.display = 'block'
+            }
+    }
+    function esconderPasta(numero) {
+        const hiddentext = document.querySelector(`.pastaEscondida${numero}`);
+            if (hiddentext.style.display = 'block'){
+                hiddentext.style.display = 'none'
+            }
+    }
+    function mostrarItens(numero) {
+        const hiddentext = document.querySelector(`.itemEscondido${numero}`);
+            if (hiddentext.style.display = 'none'){
+                hiddentext.style.display = 'block'
+            }
+    }
+    function esconderItens(numero) {
+        const hiddentext = document.querySelector(`.itemEscondido${numero}`);
+            if (hiddentext.style.display = 'block'){
+                hiddentext.style.display = 'none'
+            }
+    }
+</script>
 
 <link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
 
