@@ -8,16 +8,15 @@
         .curso {
             font-family: verdana,sans-serif;
             background-color: #fff;
-            float:left;
+            /* float:left; */
+            display: inline-block;
+            vertical-align: top;
             border: solid 1px grey;
-            box-shadow:  3px 3px 7px rgba(0, 0, 0, 0.5);
-            height: 340px;
-            width: 265px;
-            margin-left: 25px;
-            margin-right: 25px;
-            margin-bottom: 25px;
-            margin-top: 10px;
-            padding: 5px
+            box-shadow:  0px 4px 20px 0px rgba(0, 0, 0, 0.3);
+            height: 300px;
+            width: 260px;
+            margin: 5px 20px;
+            padding: 5px;
         }
 
         .curso img{
@@ -25,28 +24,31 @@
             width: 100%;
             max-height: 50%;
         }
-        .curso-info div {
-            display: inline-block;
+        .curso-info{
+            padding: 10px;
+            height: 90px;
+            overflow: hidden;
         }
-        .curso-info h4{
-            font-size: 20px;
-            padding: 0px 10px 0px 15px;
-            margin: 0px
+
+        .curso-info h4 {
+            font-size: 1.4em;
+            font-weight: 100;
+            margin: 0px;
         }
-        .curso-info p{
-            font-size: 16px;
-            padding: 0px 10px 5px 15px;
-            margin: 10px 0px 0px 0px;
-        }
+
         .curso-preco{
-            text-align:right;
-            display:inline-block;
+            float: right;
+            padding: 10px;
         }
-        .preco-de{
-            margin: 0px 20px 30px 150px;
+        .preco-de {
+            text-decoration: line-through;
+            color: firebrick;
         }
+
         .preco-por{
-            margin: 0px 20px 30px 100px;
+            color: green;
+            font-weight: bold;
+            font-size: 1.4em;
         }
     </style>
 </head>
