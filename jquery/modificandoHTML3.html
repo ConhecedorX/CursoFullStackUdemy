@@ -13,13 +13,44 @@
     <div id='conteudo'></div>
 
     <script>
-        const pessoas = [
-            { nome: 'Ana', nota: 9.1 },
-            { nome: 'Bianca', nota: 8.4 },
-            { nome: 'Carlos', nota: 7.6 },
-            { nome: 'Julia', nota: 9.7 }
-        ]
-        
-        // ...
+        // $(document).ready(function() {
+        $(function(){
+            const pessoas = [
+                { nome: 'Ana', nota: 9.1 },
+                { nome: 'Bianca', nota: 8.4 },
+                { nome: 'Carlos', nota: 7.6 },
+                { nome: 'Julia', nota: 9.7 },
+                { nome: 'Lucas', nota: 10.0}
+            ]
+
+            const alunos = pessoas.map(aluno => {
+                const tdNome = $('<td>').html(aluno.nome)
+                const tdNota = $('<td>').html(aluno.nota)
+                // return $('<tr>').append(tdNome).append(tdNota)
+                return $('<tr>').append(tdNome, tdNota)
+            })
+
+            const tabela = $('<table>').append(alunos)
+                .css('border', 'solid 5px')
+            $('#conteudo').append(tabela)
+        })
+
+        // Minha solução:
+        // 
+        // $('div').append('<tabble> </tabble>').css('border', 'solid 5px')
+        // $('div').append('<thead> <tr> <th> Nome </th> <th> Notas </th> </tr> </thead>')
+        // function separar (pessoas) {
+        //     for (let i = 0; i < pessoas.length; i++){
+        //         let separado = (Object.values(pessoas[i]))
+        //         $('div').append(`<tbody> <tr> <td> ${separado[0]} </td> <td> ${separado[1]} </td> </tr> </tbody>`)
+        //     }
+        // }
+        // separar(pessoas)
     </script>
+
+    <style>
+        table{
+            border: solid 5px black;
+        }
+    </style>
 </body>
