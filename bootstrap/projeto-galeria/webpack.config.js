@@ -9,7 +9,9 @@ module.exports = {
     mode: modoDev ? 'development' : 'production',
     entry: './src/index.js',
     devServer: {
-        contentBase: './build',
+        static: {
+            directory: __dirname + '/build'
+        },
         port: 9000,
     },
     optimization: {
