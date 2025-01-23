@@ -1,11 +1,19 @@
 {
-    "users": [{
-        "id": 1,
-        "name": "Arthur Oliveira",
-        "email": "aoLiveira@cod3r.com.br"
-    }, {
-        "id": 2,
-        "name": "Maria Julia da Silva",
-        "email": "mjds@empresa.com"
-    }]
+  "users": [
+    {
+      "id": 1,
+      "name": "Arthur Oliveira",
+      "email": "aoLiveira@cod3r.com.br"
+    },
+    {
+      "name": "Ana Julia",
+      "email": "AnaJulia@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "Lucas Gomes Correia de Franca",
+      "email": "conhecedorx@gmail.com",
+      "id": 3
+    }
+  ]
 }
